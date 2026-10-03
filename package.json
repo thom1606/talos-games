@@ -1,0 +1,62 @@
+{
+  "name": "talos-games",
+  "version": "1.0.0",
+  "description": "Minesweeper, Sudoku and 2048 for Talos.",
+  "type": "module",
+  "scripts": {
+    "action": "talos action",
+    "build": "talos build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "@thom1606/talos-sdk": "3.4.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "talos": {
+    "bundleId": "talos-games",
+    "entry": "src/index.tsx",
+    "locales": {
+      "en": "locales/en.json",
+      "nl": "locales/nl.json"
+    }
+  },
+  "commands": [
+    {
+      "name": "infinite-minesweeper",
+      "displayName": "Minesweeper",
+      "icon": "flag.slash",
+      "description": "Start a new endless Minesweeper game.",
+      "supportedFileTypes": [
+        "*"
+      ]
+    },
+    {
+      "name": "sudoku",
+      "displayName": "Sudoku",
+      "icon": "square.grid.3x3",
+      "description": "Start a new Sudoku puzzle.",
+      "supportedFileTypes": [
+        "*"
+      ]
+    },
+    {
+      "name": "play-2048",
+      "displayName": "2048",
+      "icon": "square.grid.2x2",
+      "description": "Slide and merge tiles to reach 2048.",
+      "supportedFileTypes": [
+        "*"
+      ]
+    }
+  ],
+  "engines": {
+    "node": ">=24"
+  }
+}

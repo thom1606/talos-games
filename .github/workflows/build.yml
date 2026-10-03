@@ -1,0 +1,48 @@
+name: Build Talos extension
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Read package version
+        id: package
+        run: echo "version=$(node -p 'require("./package.json").version')" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: talos-games-${{ steps.package.outputs.version }}
+          path: dist/talos-games.talos
+          if-no-files-found: error
+      - name: Publish versioned release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.package.outputs.version }}
+        run: |
+          tag="v${VERSION}"
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" dist/talos-games.talos \
+              --target "$GITHUB_SHA" \
+              --title "$tag" \
+              --notes "Built from package.json version ${VERSION}."
+          fi

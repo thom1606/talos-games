@@ -1,0 +1,62 @@
+{
+  "displayName": "Talos Games",
+  "commands": {
+    "infinite-minesweeper": {
+      "displayName": "Minesweeper",
+      "description": "Start meteen een nieuw, oneindig Minesweeper-spel."
+    },
+    "sudoku": {
+      "displayName": "Sudoku",
+      "description": "Start meteen een nieuwe Sudoku-puzzel."
+    },
+    "play-2048": {
+      "displayName": "2048",
+      "description": "Schuif en voeg vakjes samen tot 2048."
+    }
+  },
+  "game": {
+    "title": "Minesweeper",
+    "score": "Punten",
+    "points": "{count} punten",
+    "uncovered": "onthuld",
+    "flags": "Vlaggen",
+    "center": "Terug naar het midden",
+    "restart": "Nieuw spel",
+    "help": "Zo speel je",
+    "mine": "Mijn",
+    "number": "{count} mijnen rondom",
+    "empty": "Veilig vakje",
+    "flagged": "Gemarkeerd vakje",
+    "covered": "Dicht vakje",
+    "board": "Oneindig Minesweeper-bord",
+    "over": "Je raakte een mijn",
+    "again": "Opnieuw",
+    "hint": "Klik om te markeren · Houd vast om te onthullen · Sleep om te verkennen",
+    "instructions": "Klik op een dicht vakje om een vlag te plaatsen of weg te halen. Houd het vast om het te onthullen. Houd een nummer vast om alle ongemarkeerde buren te onthullen — een gemiste mijn beëindigt het spel. Sleep of scroll om in elke richting verder te gaan.",
+    "keyboard": "Toetsenbord: pijltjes bewegen tussen vakjes, F zet of verwijdert een vlag, en Spatie of Enter onthult een vakje of opent de buren van een nummer."
+  },
+  "sudoku": {
+    "title": "Sudoku",
+    "board": "Sudoku-bord",
+    "hint": "Kies een vakje en vul een cijfer in",
+    "notesOn": "Notities aan · vul een potloodcijfer in",
+    "notes": "Notities",
+    "undo": "Herstel",
+    "erase": "Wis",
+    "numbers": "Cijfers",
+    "enter": "Vul {value} in",
+    "cellValue": "Rij {row}, kolom {column}: {value}",
+    "cellEmpty": "Rij {row}, kolom {column}: leeg",
+    "complete": "Sudoku opgelost",
+    "wellDone": "Elk cijfer op zijn plek.",
+    "time": "Speeltijd {time}"
+  },
+  "twenty": {
+    "title": "2048",
+    "goal": "Maak 2048",
+    "board": "2048-bord",
+    "won": "2048 bereikt",
+    "over": "Geen zetten meer",
+    "continue": "Verder spelen"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "displayName": "Talos Games",
+  "commands": {
+    "infinite-minesweeper": {
+      "displayName": "Minesweeper",
+      "description": "Start a new endless Minesweeper game."
+    },
+    "sudoku": {
+      "displayName": "Sudoku",
+      "description": "Start a new Sudoku puzzle."
+    },
+    "play-2048": {
+      "displayName": "2048",
+      "description": "Slide and merge tiles to reach 2048."
+    }
+  },
+  "game": {
+    "title": "Minesweeper",
+    "score": "Score",
+    "points": "{count} points",
+    "uncovered": "uncovered",
+    "flags": "Flags",
+    "center": "Back to center",
+    "restart": "New game",
+    "help": "How to play",
+    "mine": "Mine",
+    "number": "{count} neighboring mines",
+    "empty": "Clear square",
+    "flagged": "Flagged square",
+    "covered": "Covered square",
+    "board": "Infinite Minesweeper board",
+    "over": "You hit a mine",
+    "again": "Try again",
+    "hint": "Click to flag · Hold to uncover · Drag to explore",
+    "instructions": "Click a covered square to place or remove a flag. Hold it to uncover it. Hold a number to uncover every unflagged neighbor — missed mines end the game. Drag or scroll to explore in any direction.",
+    "keyboard": "Keyboard: arrow keys move between squares, F toggles a flag, and Space or Enter uncovers a square or opens the neighbors of a number."
+  },
+  "sudoku": {
+    "title": "Sudoku",
+    "board": "Sudoku board",
+    "hint": "Select a square, then enter a number",
+    "notesOn": "Notes on · enter a number to pencil it in",
+    "notes": "Notes",
+    "undo": "Undo",
+    "erase": "Erase",
+    "numbers": "Numbers",
+    "enter": "Enter {value}",
+    "cellValue": "Row {row}, column {column}: {value}",
+    "cellEmpty": "Row {row}, column {column}: empty",
+    "complete": "Sudoku complete",
+    "wellDone": "Every square in its place.",
+    "time": "Playing time {time}"
+  },
+  "twenty": {
+    "title": "2048",
+    "goal": "Reach 2048",
+    "board": "2048 board",
+    "won": "You reached 2048",
+    "over": "No moves left",
+    "continue": "Keep playing"
+  }
+}
