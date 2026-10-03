@@ -48,7 +48,6 @@
     "cellValue": "Row {row}, column {column}: {value}",
     "cellEmpty": "Row {row}, column {column}: empty",
     "complete": "Sudoku complete",
-    "wellDone": "Every square in its place.",
     "time": "Playing time {time}"
   },
   "twenty": {

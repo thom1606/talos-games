@@ -18,6 +18,7 @@ export default function SudokuWindow() {
   const grid = useRef<HTMLDivElement>(null);
   const conflicts = game.conflicts;
   const completed = game.completed;
+  const completionTime = completed ? formatPlayTime(clock.elapsed(performance.now())) : '';
   const value = game.values[selected];
   const peers = new Set(sudokuPeers[selected]);
   const editable = !game.givens[selected] && !completed;
@@ -125,8 +126,10 @@ export default function SudokuWindow() {
         </div>
       </div>
       {completed && <div className="sudoku-finished" role="status">
-        <div><strong>{t('sudoku.complete')}</strong><p>{t('sudoku.wellDone')}</p>
-          <p className="sudoku-time">{t('sudoku.time', { time: formatPlayTime(clock.elapsed(performance.now())) })}</p></div>
+        <div>
+          <strong className="sudoku-time" aria-label={t('sudoku.time', { time: completionTime })}>{completionTime}</strong>
+          <p>{t('sudoku.complete')}</p>
+        </div>
       </div>}
     </main>
     <footer className="sudoku-footer">

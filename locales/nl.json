@@ -48,7 +48,6 @@
     "cellValue": "Rij {row}, kolom {column}: {value}",
     "cellEmpty": "Rij {row}, kolom {column}: leeg",
     "complete": "Sudoku opgelost",
-    "wellDone": "Elk cijfer op zijn plek.",
     "time": "Speeltijd {time}"
   },
   "twenty": {
